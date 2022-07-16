@@ -159,10 +159,8 @@ body {
   width: 50px;
   height: 50px;
   border: 5px solid #024753;
-  box-shadow: 2px 2px 8px #1d1b1b;
-
+  box-shadow: 2px 2px 8px #1d1b1b, inset 1px 1px 7px #131212;
   background: #ffffffdb;
-
   position: relative;
   animation: win1 2s ease 1s 3;
 }
