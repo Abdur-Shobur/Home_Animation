@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #124149;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+.wrap::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ededed;
+  width: 100%;
+  height: 40%;
+  z-index: -2;
+}
+.home {
+  margin: 0 auto;
+  width: 700px;
+  height: 720px;
+}
+
+/* top section chimeny  */
+.chimeny {
+  width: 30px;
+  height: 70px;
+  border-right: 18px solid #47d1e9db;
+  border-top: 5px solid #72eaffdb;
+  background: #72eaffdb;
+  top: 25px;
+  z-index: 1;
+  box-shadow: 0px 2px 2px #181414;
+  position: relative;
+  animation: chimeny 3s cubic-bezier(1, -0.07, 0.41, 1.46) 2s forwards;
+  margin-left: -150%;
+}
+@keyframes chimeny {
+  0% {
+    margin-left: -150%;
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(90deg);
+  }
+  100% {
+    margin-left: 30%;
+    transform: rotate(360deg);
+  }
+}
+/* chimeny end  */
+
+/* cieling */
+.cieling {
+  border-bottom: 100px solid #47d1e9db;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  position: relative;
+  max-width: 470px;
+  margin: 0 auto;
+  animation: cieling 2s ease 3s forwards;
+  top: -500px;
+}
+.cieling::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 100px solid #72eaffdb;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  z-index: -1;
+  transform: scale(1.2);
+}
+@keyframes cieling {
+  0% {
+    top: -500px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+/* cieling end  */
+
+/* House body  */
+.house {
+  max-width: 470px;
+  height: 200px;
+  background: #347e8b;
+  margin: 0 auto;
+  border: 30px solid #246672;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset -1px 0px 32px #131212;
+}
+.house_body {
+  animation: house_body 3s cubic-bezier(0.42, 0, 0.41, 1.21);
+  position: relative;
+}
+@keyframes house_body {
+  0% {
+    left: 250%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+/* Door  */
+.door {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.d1 {
+  width: 50px;
+  box-shadow: 2px -1px 8px #1d1b1b, inset -5px 0px 8px #1d1b1b;
+  background: white;
+  height: 70px;
+  border: 10px solid #246672;
+  position: relative;
+  animation: d1 1s ease 3s forwards;
+  transform-origin: 0% 0%;
+}
+@keyframes d1 {
+  0% {
+    transform: rotateY(-50deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Window  */
+.window {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.win1 {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #024753;
+  box-shadow: 2px 2px 8px #1d1b1b;
+
+  background: #ffffffdb;
+
+  position: relative;
+  animation: win1 2s ease 1s 3;
+}
+@keyframes win1 {
+  0% {
+    transform: rotate(180deg);
+    box-shadow: none;
+  }
+  100% {
+  }
+}
+/* House body end  */
+
+/* yard  */
+.yard {
+  width: 585px;
+  height: 40px;
+  background: #124149;
+  box-shadow: 2px 2px 4px #3e3e3e;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  left: -250%;
+  animation: yard 2s ease 2s forwards;
+}
+@keyframes yard {
+  0% {
+    left: -250%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+/* Road  */
+.r {
+  max-width: 300px;
+  height: 100px;
+  background-color: #292727;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset -1px 0px 32px #414141, 3px 1px 3px #6d6a6a;
+}
+
+.road .r1::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  border: none;
+}
+.road .r2::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: -11px;
+  border: none;
+}
+
+/* Main road  */
+.road .r3 {
+  width: 100%;
+  height: 107px;
+  background-color: #656565;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow: inset 7px 7px 14px 12px rgb(65 65 65 / 85%);
+}
+
+.main_road {
+  position: relative;
+  animation: main_road 2s ease forwards;
+  right: -250%;
+}
+@keyframes main_road {
+  0% {
+    right: -250%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+.sub_road {
+  position: relative;
+  animation: sub_road 3s ease 1s forwards;
+  opacity: 0;
+}
+@keyframes sub_road {
+  0% {
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive  */
+@media (max-width: 700px) {
+  .home {
+    margin: 30px;
+  }
+  .yard {
+    width: 100%;
+  }
+  .cieling {
+    width: 100%;
+  }
+  .house {
+    width: 90%;
+  }
+  .r {
+    width: 70%;
+  }
+  .wrap {
+    overflow: scroll;
+  }
+}
